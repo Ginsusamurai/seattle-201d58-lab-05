@@ -87,10 +87,12 @@ function sumArray(sumArr) { //eslint-disable-line
     }
   }
 
-  for(var i = 0; i + 1 < sumArr.length; i++){
-    sumTotal += sum(sumArr[i],sumArr[i + 1])[0];
-    console.log(sumTotal);
-  }
+  // for(var i = 0; i + 1 < sumArr.length; i++){
+  //   sumTotal += sum(sumArr[i],sumArr[i + 1])[0];
+  //   console.log(sumTotal);
+  // }
+
+  sumTotal = sum(sum(sumArr[0],sumArr[1])[0],sumArr[2])[0];
 
   outputString = arrayValsString + ' was passed in as an array of numbers, and ' + sumTotal + ' is their sum.';
 
