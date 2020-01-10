@@ -161,7 +161,7 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-  var numberSlot1 = false;
+  var arrayMultTotal = false;
   var arrayValsString = '';
   var answerString = '';
 
@@ -176,17 +176,17 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     return 'ERROR: This array isn\'t long enough.';
   }
 
-  if(numberSlot1 == false){
-    numberSlot1 = dynamicArray[0];
+  if(arrayMultTotal === false){
+    arrayMultTotal = dynamicArray[0];
   }
 
   for(var i = 1; i < dynamicArray.length; i++){
-    numberSlot1 *= dynamicArray[i];
+    arrayMultTotal *= dynamicArray[i];
   }
 
-  "The numbers 1,2,3,4,5 have a product of 120."
+  answerString = 'The numbers ' + arrayValsString + ' have a product of ' + arrayMultTotal + '.';
 
-  return numberSlot1;
+  return [arrayMultTotal, answerString];
 
 }
 
