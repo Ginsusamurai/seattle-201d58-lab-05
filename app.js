@@ -161,10 +161,36 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+  var numberSlot1 = false;
+  var arrayValsString = '';
+  var answerString = '';
+
+  for (var nums = 0; nums < dynamicArray.length; nums++){
+    arrayValsString += dynamicArray[nums];
+    if (nums < dynamicArray.length - 1){
+      arrayValsString += ',';
+    }
+  }
+
+  if (dynamicArray.length <= 1){
+    return 'ERROR: This array isn\'t long enough.';
+  }
+
+  if(numberSlot1 == false){
+    numberSlot1 = dynamicArray[0];
+  }
+
+  for(var i = 1; i < dynamicArray.length; i++){
+    numberSlot1 *= dynamicArray[i];
+  }
+
+  "The numbers 1,2,3,4,5 have a product of 120."
+
+  return numberSlot1;
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
