@@ -181,7 +181,7 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   }
 
   for(var i = 1; i < dynamicArray.length; i++){
-    arrayMultTotal *= dynamicArray[i];
+    arrayMultTotal = multiply(arrayMultTotal,dynamicArray[i])[0];
   }
 
   answerString = 'The numbers ' + arrayValsString + ' have a product of ' + arrayMultTotal + '.';
